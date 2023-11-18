@@ -52,7 +52,7 @@
                 </li>
 
                 <li>
-                  <%= link_to homes_about_path, class:"nav-link text-light" do %>
+                  <%= link_to about_path, class:"nav-link text-light" do %>
                     <i class="fa-solid fa-link"></i> About
                   <% end %>
                 </li>
@@ -75,8 +75,12 @@
       </nav>
     </header>
     <main>
-      <p id="notice"></p>
-      <%= yield %>
+    <% if flash[:notice] %>
+      <%= notice %>
+    <% else %>
+      <%= alert %>
+    <% end %>
+    <%= yield %>
     </main>
     <footer>
       <div class="container mt-5">
