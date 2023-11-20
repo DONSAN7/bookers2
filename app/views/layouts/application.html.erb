@@ -75,11 +75,7 @@
       </nav>
     </header>
     <main>
-    <% if flash[:notice] %>
-      <%= notice %>
-    <% else %>
-      <%= alert %>
-    <% end %>
+    <%= flash[:notice] %>
     <%= yield %>
     </main>
     <footer>

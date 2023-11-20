@@ -1,12 +1,12 @@
-<% if model.errors.any? %>
-  <div class="error_explanation">
+<% if obj.errors.any? %>
+  <div id="error_explanation">
     <h3>
-      <%= pluralize(model.errors.count, "error") %> prohibited this product from being saved:
+      <%= pluralize(obj.errors.count, "error") %> prohibited this obj from being saved:
     </h3>
-  </div>
     <ul>
-      <% model.errors.full_messages.each do |message| %>
+      <% obj.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
+  </div>
 <% end %>
